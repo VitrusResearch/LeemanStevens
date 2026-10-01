@@ -122,7 +122,7 @@
             color: #C7C6C6; 
         }
 
-        /* Fluid Steel Blue Entrance Sweep */
+        /* High-Fluid Ultra-Swoosh Entrance Transition */
         .intro-sweep {
             position: fixed;
             top: 0;
@@ -132,22 +132,25 @@
             background-color: #758DAB;
             z-index: 9999;
             pointer-events: none;
-            /* Using a high-performance bezier curve for realistic momentum fluid motion */
-            animation: fluidSweepOut 1.2s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+            /* Uses a premium exponential curve that mimics physical liquid momentum deceleration */
+            animation: liquidSwooshOut 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        @keyframes fluidSweepOut {
+        @keyframes liquidSwooshOut {
             0% {
-                transform: translateY(0%);
+                transform: scale(1);
                 opacity: 1;
+                filter: blur(0px);
             }
-            40% {
-                transform: translateY(0%);
+            30% {
+                transform: scale(1.02);
                 opacity: 1;
+                filter: blur(2px);
             }
             100% {
-                transform: translateY(-100%);
+                transform: scale(1.15); /* Billows outward like smoke/lens bloom */
                 opacity: 0;
+                filter: blur(24px); /* Dissolves away softly into darkness */
             }
         }
     </style>
@@ -172,7 +175,7 @@
         <h2>Contact Me</h2>
         
         <div class="form-wrapper">
-            <iframe width="640px" height="1000px" src="https://cloud.microsoft" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:2000px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+            <iframe width="640px" height="1000px" src="https://forms.cloud.microsoft/r/6vyVUtbuUD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:2000px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         </div>
 
         <div class="socials">
