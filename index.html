@@ -3,50 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Leeman Stevens | R&D Engineer</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        
         body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            height: 100vh;
+            background-color: #0d0f12; 
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container { 
+            max-width: 550px; 
+            width: 100%;
+            background: #161a1f; 
+            padding: 40px; 
+            border-radius: 12px; 
+            border: 1px solid #242b35;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
             text-align: center;
-            padding: 20px;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+
+        .profile-header {
+            margin-bottom: 30px;
         }
-        .container { max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 16px; backdrop-filter: blur(10px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; letter-spacing: -0.5px; }
-        p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; line-height: 1.5; }
-        form { display: flex; gap: 10px; margin-bottom: 30px; }
-        input[type="email"] { flex: 1; padding: 12px 20px; border: none; border-radius: 8px; font-size: 1rem; outline: none; }
-        button { background: #fff; color: #e73c7e; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: transform 0.2s; }
-        button:hover { transform: scale(1.02); }
-        .socials { display: flex; justify-content: center; gap: 20px; font-size: 0.9rem; }
-        .socials a { color: white; text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
-        .socials a:hover { opacity: 1; }
+
+        .orange-tag {
+            color: #ff6600; 
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        h1 { 
+            font-size: 2.2rem; 
+            margin-bottom: 12px; 
+            font-weight: 700; 
+            letter-spacing: -0.5px; 
+        }
+
+        p { 
+            font-size: 1.05rem; 
+            margin-bottom: 30px; 
+            color: #94a3b8; 
+            line-height: 1.6; 
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: left;
+            border-bottom: 1px solid #242b35;
+            padding-bottom: 8px;
+        }
+
+        /* Responsive Form Frame Wrapper */
+        .form-wrapper {
+            position: relative;
+            width: 100%;
+            height: 500px; /* Adjust height based on your form length */
+            margin-bottom: 35px;
+            background: #0d0f12;
+            border-radius: 6px;
+            border: 1px solid #242b35;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .socials { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            font-size: 0.95rem; 
+            border-top: 1px solid #242b35;
+            padding-top: 25px;
+        }
+
+        .socials a { 
+            color: #94a3b8; 
+            text-decoration: none; 
+            transition: color 0.2s; 
+            font-weight: 500;
+        }
+
+        .socials a:hover { 
+            color: #ff6600; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Something exciting is coming.</h1>
-        <p>Our brand new website is under construction. Sign up to be the first to know when we launch!</p>
-        <form onsubmit="alert('Thank you for subscribing!'); return false;">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Notify Me</button>
-        </form>
+        <div class="profile-header">
+            <span class="orange-tag">Research & Development</span>
+            <h1>Leeman Stevens</h1>
+            <p>R&D Engineer specializing in high-performance mechanical designs, rugged electronics enclosures, and turning complex conceptual product ideas into production-ready reality.</p>
+        </div>
+
+        <h2>Contact Me</h2>
+        
+        <div class="form-wrapper">
+            <!-- PASTE YOUR GOOGLE FORMS IFRAME LINK BELOW -->
+            <iframe src="https://google.com">Loading…</iframe>
+        </div>
+
         <div class="socials">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">Contact</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://vitrusresearch.com" target="_blank">Vitrus Research</a>
         </div>
     </div>
 </body>
