@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leeman Stevens | R&D Engineer</title>
+    <!-- Fixed font links (Moved safely outside of the style block) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <style>
-        <link href="https://googleapis.com" rel="stylesheet">
-        <link rel="icon" type="image/png" href="favicon.png">
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         
         body {
@@ -36,7 +40,6 @@
             margin-bottom: 30px;
         }
 
-        
         .orange-tag {
             font-family: 'League Spartan', Arial, sans-serif; /* Aharoni web alternative */
             font-weight: 900; /* Extra Bold to match Aharoni thickness */
@@ -47,7 +50,6 @@
             margin-bottom: 8px;
             display: inline-block;
         }
-
 
         h1 { 
             font-size: 2.2rem; 
@@ -71,12 +73,11 @@
             margin-top: 30px;
             margin-bottom: 15px;
             color: #ffffff;
-            font-weight: 800;
             text-align: center;
             border-bottom: 1px solid #242b35;
             padding-bottom: 8px;
             font-family: 'League Spartan', Arial, sans-serif; /* Aharoni web alternative */
-            font-weight: 650; /* Extra Bold to match Aharoni thickness */
+            font-weight: 800; /* Extra Bold to match Aharoni thickness */
         }
 
         /* Responsive Form Frame Wrapper */
@@ -122,9 +123,42 @@
         .socials a:hover { 
             color: #C7C6C6; 
         }
+
+        /* Entrance Flash and Sweep Effect Layout */
+        .intro-sweep {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #00a896 0%, #ff6600 100%);
+            z-index: 9999;
+            pointer-events: none;
+            animation: sweepOut 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes sweepOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0px);
+            }
+            60% {
+                opacity: 0.9;
+                filter: blur(4px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100%);
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
+    
+    <!-- Animated Intro Elements -->
+    <div class="intro-sweep"></div>
     
     <div class="container">
         <div class="profile-header">
@@ -134,25 +168,24 @@
         </div>
 
         <div class="socials">
-    <!-- This opens your uploaded PDF in a new browser tab -->
-    <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
-    <a href="https://linkedin.com/LeemanStevens" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
-</div>
+            <!-- This opens your uploaded PDF in a new browser tab -->
+            <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
+            <a href="https://linkedin.com/LeemanStevens" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
+        </div>
 
         <h2>Contact Me</h2>
         
         <div class="form-wrapper">
-            <!-- PASTE YOUR GOOGLE FORMS IFRAME LINK BELOW -->
             <iframe width="640px" height="1000px" src="https://forms.cloud.microsoft/r/6vyVUtbuUD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:2000px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         </div>
 
         <div class="socials">
-    <!-- This opens your uploaded PDF in a new browser tab -->
-    <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
-    <a href="https://linkedin.com/LeemanStevens" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
-</div>
+            <!-- This opens your uploaded PDF in a new browser tab -->
+            <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
+            <a href="https://linkedin.com/LeemanStevens" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
+        </div>
     </div>
 </body>
 </html>
