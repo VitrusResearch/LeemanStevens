@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leeman Stevens | R&D Engineer</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=League+Spartan:wght@500;650;700;800;900&display=swap" rel="stylesheet">
+    <!-- Fixed font paths so League Spartan loads successfully on all devices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;650;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
     
     <style>
@@ -51,12 +52,12 @@
         }
 
         h1 { 
-            font-size: 2.5rem; /* Slightly increased size to emphasize the capital first letters */
+            font-size: 2.5rem; 
             margin-bottom: 12px; 
             letter-spacing: -0.5px; 
             font-family: 'League Spartan', Arial, sans-serif; 
             font-weight: 700; 
-            font-variant: small-caps; /* Enables the small-caps engine */
+            font-variant: small-caps; 
         }    
 
         p { 
@@ -88,8 +89,7 @@
             border-radius: 6px;
             border: 1px solid #242b35;
             overflow: hidden;
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 500; 
+            -webkit-overflow-scrolling: touch; /* Ensures smooth touch kinetic scrolling on iOS Safari */
         }
 
         iframe {
@@ -132,25 +132,34 @@
             background-color: #758DAB;
             z-index: 9999;
             pointer-events: none;
-            /* Uses a premium exponential curve that mimics physical liquid momentum deceleration */
             animation: liquidSwooshOut 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         @keyframes liquidSwooshOut {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-                filter: blur(0px);
+            0% { transform: scale(1); opacity: 1; filter: blur(0px); }
+            30% { transform: scale(1.02); opacity: 1; filter: blur(2px); }
+            100% { transform: scale(1.15); opacity: 0; filter: blur(24px); }
+        }
+
+        /* Responsive Mobile Real Estate Overrides */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px; /* Frees up extra screen margin space */
             }
-            30% {
-                transform: scale(1.02);
-                opacity: 1;
-                filter: blur(2px);
+            .container {
+                padding: 24px 16px; /* Tightens container padding so inner elements span wider */
+                border-radius: 8px;
             }
-            100% {
-                transform: scale(1.15); /* Billows outward like smoke/lens bloom */
-                opacity: 0;
-                filter: blur(24px); /* Dissolves away softly into darkness */
+            h1 {
+                font-size: 2.1rem; /* Responsively scales header size to fit small displays cleanly */
+            }
+            .form-wrapper {
+                height: 1150px; /* Tailors form box depth specifically for compact touch-field layouts */
+                margin-bottom: 25px;
+            }
+            .socials {
+                gap: 15px; /* Brings links closer together so they don't wrap onto ugly secondary lines */
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -168,20 +177,20 @@
 
         <div class="socials">
             <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/LeemanStevens" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
         </div>
 
         <h2>Contact Me</h2>
         
         <div class="form-wrapper">
-            <iframe width="100%" height="100%" src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=rWUi4cCiBUyXsGlHKw-2T9AvZ_pZk0ZBpkMT3c-WDY9UQkY5RTJJQzJHWUxKMVlOV1E4OEdXQ1pRMS4u&embed=true&route=shorturl" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100%" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+            <iframe src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=rWUi4cCiBUyXsGlHKw-2T9AvZ_pZk0ZBpkMT3c-WDY9UQkY5RTJJQzJHWUxKMVlOV1E4OEdXQ1pRMS4u&embed=true&route=shorturl" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         </div>
 
         <div class="socials">
             <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/LeemanStevens" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
         </div>
     </div>
 </body>
