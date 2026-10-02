@@ -4,45 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leeman Stevens | R&D Engineer</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=League+Spartan:wght@500;650;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
-    
+
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        
+
         body {
-            background-color: #0d0f12; 
+            background-color: #0d0f12;
             color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 40px 20px;
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 650; 
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 650;
         }
 
-        .container { 
-            max-width: 550px; 
+        .container {
+            max-width: 550px;
             width: 100%;
-            background: #161a1f; 
-            padding: 40px; 
-            border-radius: 12px; 
+            background: #161a1f;
+            padding: 40px;
+            border-radius: 12px;
             border: 1px solid #242b35;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
 
-        .profile-header {
-            margin-bottom: 30px;
-        }
+        .profile-header { margin-bottom: 30px; }
 
         .orange-tag {
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 900; 
-            color: #758DAB; 
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 900;
+            color: #758DAB;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -50,133 +48,147 @@
             display: inline-block;
         }
 
-        h1 { 
-            font-size: 2.5rem; 
-            margin-bottom: 12px; 
-            letter-spacing: -0.5px; 
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 700; 
-            font-variant: small-caps; 
-        }    
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 700;
+            font-variant: small-caps;
+        }
 
-        p { 
-            font-size: 1.05rem; 
-            margin-bottom: 30px; 
-            color: #94a3b8; 
-            line-height: 1.6; 
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            color: #94a3b8;
+            line-height: 1.6;
             text-align: left;
         }
 
         h2 {
             font-size: 1.8rem;
             margin-top: 30px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #ffffff;
             text-align: center;
             border-bottom: 1px solid #242b35;
             padding-bottom: 8px;
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 800; 
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 800;
         }
 
-        /* Viewport Window Box to crop disclaimer and bar elements */
-        .form-wrapper {
-            position: relative;
-            width: 100%;
-            height: 610px; /* Exact structural window depth for Desktop view fields */
-            margin-bottom: 35px;
-            background: #161a1f; 
-            border-radius: 6px;
-            border: 1px solid #242b35;
-            overflow: hidden; /* Lock scrollbar rendering completely out of the frame */
-        }
-
-        /* Masking Matrix to pull inputs up and isolate footer junk lines */
-        .form-wrapper iframe {
-            position: absolute;
-            top: -55px; /* Shaves off top header bar spacing gaps */
-            left: 0;
-            width: 100%;
-            height: 720px; /* Extended internal depth to hold active fields before crop */
-            border: none;
-            overflow: hidden;
-        }
-
-        .socials { 
-            display: flex; 
-            justify-content: center; 
-            gap: 25px; 
-            font-size: 0.95rem; 
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 0.95rem;
             border-top: 1px solid #758DAB;
             padding-top: 25px;
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 900; 
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 900;
         }
 
-        .socials a { 
-            color: #94a3b8; 
-            text-decoration: none; 
-            transition: color 0.2s; 
-            font-weight: 500;
-            font-family: 'League Spartan', Arial, sans-serif; 
-            font-weight: 900; 
+        .socials a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 900;
         }
 
-        .socials a:hover { 
-            color: #C7C6C6; 
+        .socials a:hover { color: #C7C6C6; }
+        .socials a:focus-visible { outline: 2px solid #758DAB; outline-offset: 4px; border-radius: 2px; }
+
+        /* ---------- Contact form ---------- */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 35px;
+            text-align: left;
         }
 
-        /* High-Fluid Ultra-Swoosh Entrance Transition */
-        .intro-sweep {
-            position: fixed;
-            top: 0;
-            left: 0;
+        #contact-form label {
+            display: block;
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 6px;
+        }
+
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
             width: 100%;
-            height: 100vh;
-            background-color: #758DAB;
-            z-index: 9999;
-            pointer-events: none;
-            animation: liquidSwooshOut 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            background: #0d0f12;
+            color: #ffffff;
+            border: 1px solid #242b35;
+            border-radius: 6px;
+            padding: 12px 14px;
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 650;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
-        @keyframes liquidSwooshOut {
-            0% { transform: scale(1); opacity: 1; filter: blur(0px); }
-            30% { transform: scale(1.02); opacity: 1; filter: blur(2px); }
-            100% { transform: scale(1.15); opacity: 0; filter: blur(24px); }
+        #contact-form textarea { min-height: 130px; resize: vertical; line-height: 1.5; }
+
+        #contact-form input:focus,
+        #contact-form textarea:focus {
+            outline: none;
+            border-color: #758DAB;
+            box-shadow: 0 0 0 3px rgba(117, 141, 171, 0.25);
         }
 
-        /* Mobile Viewport Slicing Overrides */
+        #contact-form button {
+            background: #758DAB;
+            color: #0d0f12;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 20px;
+            font-family: 'League Spartan', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s, opacity 0.2s;
+        }
+
+        #contact-form button:hover:not(:disabled) { background: #8aa0bb; }
+        #contact-form button:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+        #contact-form button:disabled { opacity: 0.6; cursor: default; }
+
+        .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+        .status { min-height: 1.4em; font-size: 0.95rem; font-weight: 650; color: #94a3b8; }
+        .status.ok { color: #9fd3b5; }
+        .status.err { color: #e8a0a0; }
+        .note { font-size: 0.85rem; line-height: 1.4; color: #8190a3; font-weight: 650; }
+
+        /* ---------- Loading: blue smoke sweeps across and reveals the page ---------- */
+        .veil, .fx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; transition: opacity 0.8s ease; }
+        .veil { z-index: 9997; background: #0d0f12; animation: veilFailsafe 0.6s ease 6s forwards; }
+        #fx { z-index: 9998; }
+        body.is-done .veil, body.is-done .fx { opacity: 0; }
+        @keyframes veilFailsafe { to { opacity: 0; visibility: hidden; } }
+
         @media (max-width: 600px) {
-            body {
-                padding: 15px 10px; 
-            }
-            .container {
-                padding: 24px 16px; 
-                border-radius: 8px;
-            }
-            h1 {
-                font-size: 2.1rem; 
-            }
-            /* Recalculated mobile dimensions to snap directly under input fields and hide banner */
-            .form-wrapper {
-                height: 740px; 
-                margin-bottom: 25px;
-            }
-            .form-wrapper iframe {
-                top: -45px;
-                height: 840px;
-            }
-            .socials {
-                gap: 15px; 
-                font-size: 0.85rem;
-            }
+            body { padding: 15px 10px; }
+            .container { padding: 24px 16px; border-radius: 8px; }
+            h1 { font-size: 2.1rem; }
+            .socials { gap: 15px; font-size: 0.85rem; }
         }
     </style>
+
+    <noscript>
+        <style>.veil, .fx { display: none; }</style>
+    </noscript>
 </head>
 <body>
-    
-    <div class="intro-sweep"></div>
-    
+
+    <div class="veil" aria-hidden="true"></div>
+    <canvas id="fx" class="fx" aria-hidden="true"></canvas>
+
     <div class="container">
         <div class="profile-header">
             <span class="orange-tag">R&D | Engineering | Design</span>
@@ -191,11 +203,32 @@
         </div>
 
         <h2>Contact Me</h2>
-        
-        <div class="form-wrapper">
-            <!-- Embedded form cleanly framed with absolute tracking properties -->
-            <iframe width="640px" height="1000px" src="https://forms.cloud.microsoft/r/6vyVUtbuUD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:2000px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-        </div>
+
+        <!-- Replace YOUR_EMAIL_HERE with the address that should receive messages. -->
+        <form id="contact-form" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="New message from leemanstevens.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://www.leemanstevens.com/">
+
+            <div>
+                <label for="f-name">Name</label>
+                <input type="text" id="f-name" name="name" autocomplete="name" required>
+            </div>
+            <div>
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" autocomplete="email" required>
+            </div>
+            <div>
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Send message</button>
+            <div class="status" role="status" aria-live="polite"></div>
+            <div class="note">Messages are delivered by email through a third-party form service, so please avoid sharing sensitive personal details or controlled/classified information.</div>
+        </form>
 
         <div class="socials">
             <a href="resume-leeman-stevens.pdf" target="_blank">View My Resume (PDF)</a>
@@ -203,5 +236,158 @@
             <a href="https://instagram.com/LeemanStevens" target="_blank">Instagram</a>
         </div>
     </div>
+
+    <script>
+    /* Contact form: posts in the background and shows the result in place. */
+    (function () {
+        var form = document.getElementById('contact-form');
+        var btn = form.querySelector('button');
+        var status = form.querySelector('.status');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            status.className = 'status';
+            status.textContent = '';
+
+            fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            })
+            .then(function (r) { if (!r.ok) throw new Error('bad response'); return r.json(); })
+            .then(function () {
+                form.reset();
+                status.className = 'status ok';
+                status.textContent = 'Message sent. I will reply by email.';
+            })
+            .catch(function () {
+                status.className = 'status err';
+                status.textContent = 'The message did not send. Check your connection and try again.';
+            })
+            .then(function () {
+                btn.disabled = false;
+                btn.textContent = 'Send message';
+            });
+        });
+    })();
+    </script>
+
+    <script>
+    /* Loader: a solid dark cover is dissolved by a warped-noise smoke field in #758DAB.
+       It is rendered per pixel at low resolution and scaled up by the browser, so the
+       cloud reads as one continuous, swirling mass rather than separate puffs.
+       Tuning knobs: SWEEP (ms), MIN_SHOW (ms), PIXELS (render resolution), BAND (softness/width of the smoke). */
+    (function () {
+        var MIN_SHOW = 350, MAX_WAIT = 1000, SWEEP = 1900, PIXELS = 45000, BAND = 0.42;
+        var body = document.body;
+        var veil = document.querySelector('.veil');
+        var cv = document.getElementById('fx');
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var ctx = cv.getContext && cv.getContext('2d');
+        var ended = false, begun = false, fading = false, t0 = 0;
+
+        function finish() {
+            if (fading) return;
+            fading = true;
+            body.classList.add('is-done');
+            setTimeout(function () {
+                ended = true;
+                [cv, veil].forEach(function (el) { if (el && el.parentNode) el.parentNode.removeChild(el); });
+            }, 900);
+        }
+
+        if (reduce || !ctx) { finish(); return; }
+
+        /* 2D value noise */
+        var perm = new Uint8Array(512), i;
+        for (i = 0; i < 256; i++) perm[i] = i;
+        for (i = 255; i > 0; i--) { var j = (Math.random() * (i + 1)) | 0, tmp = perm[i]; perm[i] = perm[j]; perm[j] = tmp; }
+        for (i = 0; i < 256; i++) perm[i + 256] = perm[i];
+        function noise(x, y) {
+            var xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi;
+            xi &= 255; yi &= 255;
+            var u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+            var a = perm[perm[xi] + yi], b = perm[perm[xi + 1] + yi];
+            var c = perm[perm[xi] + yi + 1], d = perm[perm[xi + 1] + yi + 1];
+            var top = a + (b - a) * u, bot = c + (d - c) * u;
+            return (top + (bot - top) * v) / 255;
+        }
+
+        var W, H, img, data;
+        function size() {
+            var k = Math.min(1, Math.sqrt(PIXELS / (window.innerWidth * window.innerHeight)));
+            W = Math.max(2, Math.round(window.innerWidth * k));
+            H = Math.max(2, Math.round(window.innerHeight * k));
+            cv.width = W; cv.height = H;
+            img = ctx.createImageData(W, H); data = img.data;
+        }
+        size();
+        window.addEventListener('resize', function () { if (!begun) size(); });
+
+        /* f = position of the front (about -1 = nothing revealed, 1.9 = everything revealed) */
+        function render(t, f) {
+            var aspect = W / H, p = 0, x, y;
+            for (y = 0; y < H; y++) {
+                var ny = y / H;
+                for (x = 0; x < W; x++) {
+                    var nx = x / W;
+                    var px = nx * aspect * 2.2, py = ny * 2.2;
+                    /* domain warp: noise bends the noise, which creates the curling, billowing look */
+                    var qx = noise(px + t * 0.4, py - t * 0.25);
+                    var qy = noise(px - t * 0.3 + 5.2, py + t * 0.35 + 1.3);
+                    var wx = px + qx * 2.2, wy = py + qy * 2.2;
+                    var n = noise(wx * 1.3, wy * 1.3 + t * 0.2) * 0.65 + noise(wx * 2.7 - t * 0.25, wy * 2.7) * 0.35;
+                    var w2 = noise(wx * 4 + t * 0.6, wy * 4 - t * 0.35);   /* fine wisps */
+                    var d = nx * 0.85 + ny * 0.15 + (n - 0.5) * 0.9;        /* local arrival time of the front */
+                    var s = (f - d) / BAND;
+                    var r, g, b, a, k;
+
+                    if (s <= 0) {
+                        k = s > -0.12 ? (s + 0.12) / 0.12 : 0;              /* smoke glow just ahead of the edge */
+                        k = k * k * (3 - 2 * k);
+                        r = 13 + 104 * k; g = 15 + 126 * k; b = 18 + 153 * k; a = 255;
+                    } else if (s < 1) {
+                        var u = 1 - s, lt = w2 * 0.6;
+                        r = 117 + 51 * lt; g = 141 + 46 * lt; b = 171 + 39 * lt;   /* #758DAB toward a lighter tint */
+                        a = 255 * (u * u * (3 - 2 * u)) * (1 - 0.8 * s * (1 - w2));
+                    } else {
+                        r = g = b = a = 0;
+                    }
+                    data[p++] = r; data[p++] = g; data[p++] = b; data[p++] = a;
+                }
+            }
+            ctx.putImageData(img, 0, 0);
+        }
+
+        /* first frame is solid dark, identical to the veil, so the hand-off is invisible */
+        render(performance.now() / 1000, -1);
+        if (veil && veil.parentNode) { veil.parentNode.removeChild(veil); veil = null; }
+
+        function frame(now) {
+            if (ended) return;
+            if (!begun) { requestAnimationFrame(frame); return; }          /* solid dark cover while loading */
+            var p = Math.min(1, (now - t0) / SWEEP);
+            if (p >= 1) { finish(); return; }
+            var e = 0.35 * p * p * (3 - 2 * p) + 0.65 * p;                  /* mostly linear, softly eased */
+            render(now / 1000, -0.55 + e * 2.45);
+            requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+
+        function begin() { if (!begun) { begun = true; t0 = performance.now(); } }
+
+        var started = performance.now();
+        var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+        var pageReady = new Promise(function (resolve) {
+            if (document.readyState === 'complete') resolve(); else window.addEventListener('load', resolve);
+        });
+        Promise.all([fontsReady, pageReady]).then(function () {
+            setTimeout(begin, Math.max(0, MIN_SHOW - (performance.now() - started)));
+        });
+        setTimeout(begin, MAX_WAIT);
+    })();
+    </script>
 </body>
 </html>
